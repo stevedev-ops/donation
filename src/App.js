@@ -9,7 +9,9 @@ import DonateForm from './components/DonateForm';
 import DonationHistory from './components/DonationHistory';
 import CharityApplication from './components/CharityApplication';
 import CharityDashboard from './components/CharityDashboard';
-import AdminDashboard from './components/AdminDashboard';  // Admin Dashboard Component
+import AdminDashboard from './components/AdminDashboard';
+import SignupPage from './components/SignupPage';
+import LoginPage from './components/LoginPage';
 import './App.css';
 
 function App() {
@@ -25,9 +27,11 @@ function App() {
             <Route path="/donation-history" element={<DonationHistory />} />
             <Route path="/charity-application" element={<CharityApplication />} />
             <Route path="/charity-dashboard" element={<CharityDashboard />} />
-
             {/* Admin Routes */}
             <Route path="/admin-dashboard" element={<AdminDashboard />} />
+            {/* Authentication Routes */}
+            <Route path="/signup" element={<SignupPage />} />
+            <Route path="/login" element={<LoginPage />} />
           </Routes>
         </div>
       </Router>

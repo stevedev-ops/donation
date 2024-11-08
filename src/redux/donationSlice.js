@@ -6,8 +6,8 @@ const initialState = {
   recurring: false,
   anonymity: true,
   userName: '',
-  donationHistory: [],
-  donationsByCharity: {}, // To track donations by charity
+  donationHistory: [],        // Tracks all donations made
+  donationsByCharity: {},     // Tracks donations by charity ID
 };
 
 const donationSlice = createSlice({
@@ -31,11 +31,9 @@ const donationSlice = createSlice({
     },
     addDonation: (state, action) => {
       const donationData = action.payload;
+      state.donationHistory.push(donationData);  // Add to global donation history
 
-      // Add to donationHistory
-      state.donationHistory.push(donationData);
-
-      // Add the donation to the charity-specific donations
+      // Add donation to specific charity
       const charityId = donationData.campaignTitle; // Assuming campaignTitle is the charity ID
       if (!state.donationsByCharity[charityId]) {
         state.donationsByCharity[charityId] = [];
@@ -45,13 +43,13 @@ const donationSlice = createSlice({
   },
 });
 
-export const { 
-  setSelectedCampaign, 
-  setDonationAmount, 
-  setRecurring, 
-  setAnonymity, 
+export const {
+  setSelectedCampaign,
+  setDonationAmount,
+  setRecurring,
+  setAnonymity,
   setUserName,
-  addDonation 
+  addDonation,
 } = donationSlice.actions;
 
 export default donationSlice.reducer;
