@@ -81,111 +81,97 @@ const ContactPage = () => {
         </form>
       </div>
       <div style={styles.ctaContainer}>
-        <h2 style={styles.ctaHeading}>Share your thoughts</h2>
-        <p style={styles.ctaText}>We value your feedback and are here to help you with any questions or concerns.</p>
+        <h2 style={styles.ctaTitle}>Share your thoughts</h2>
+        <p>We value your feedback and are here to help you with any questions or concerns.</p>
         <div style={styles.socialMediaIcons}>
-          <button style={styles.socialIcon} onClick={() => window.location.href = 'https://facebook.com'}>F</button>
-          <button style={styles.socialIcon} onClick={() => window.location.href = 'https://twitter.com'}>T</button>
-          <button style={styles.socialIcon} onClick={() => window.location.href = 'https://instagram.com'}>I</button>
-          <button style={styles.socialIcon} onClick={() => window.location.href = 'https://linkedin.com'}>L</button>
-          <button style={styles.socialIcon} onClick={() => window.location.href = 'https://youtube.com'}>Y</button>
+          <button style={styles.socialIcon} onClick={() => window.location.href = 'https://facebook.com'}>Facebook</button>
+          <button style={styles.socialIcon} onClick={() => window.location.href = 'https://twitter.com'}>Twitter</button>
+          <button style={styles.socialIcon} onClick={() => window.location.href = 'https://instagram.com'}>Instagram</button>
+          <button style={styles.socialIcon} onClick={() => window.location.href = 'https://linkedin.com'}>LinkedIn</button>
+          <button style={styles.socialIcon} onClick={() => window.location.href = 'https://youtube.com'}>YouTube</button>
         </div>
       </div>
     </div>
   );
 };
 
-// Enhanced Inline Styles
+// Styles object for inline styling
 const styles = {
   container: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     height: '100vh',
-    background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)', // Soft gradient background
+    backgroundColor: '#121212',
     color: '#ffffff',
-    fontFamily: 'Arial, sans-serif',
   },
   formContainer: {
-    backgroundColor: '#ffffff',
-    padding: '30px',
-    borderRadius: '12px',
-    boxShadow: '0 4px 15px rgba(0, 0, 0, 0.1)',
+    backgroundColor: '#f0f0f0',
+    padding: '20px',
+    borderRadius: '8px',
+    marginRight: '20px',
     width: '500px',
-    maxWidth: '100%',
-    marginRight: '30px',
   },
   label: {
-    display: 'block',
-    marginBottom: '6px',
+    fontSize: '18px',
+    fontWeight: 'bold',
     color: '#333333',
-    fontWeight: '600',
-    fontSize: '1.1rem',
+    marginBottom: '8px',
+    display: 'block',
+    transition: 'color 0.3s ease',
   },
   input: {
     width: '100%',
-    padding: '12px',
-    margin: '8px 0',
+    padding: '10px',
+    margin: '10px 0',
     border: '1px solid #ccc',
-    borderRadius: '8px',
-    fontSize: '1rem',
-    transition: 'border-color 0.3s ease',
+    borderRadius: '4px',
+    fontSize: '16px',
   },
   textarea: {
     width: '100%',
-    padding: '12px',
-    margin: '8px 0',
+    padding: '10px',
+    margin: '10px 0',
     border: '1px solid #ccc',
-    borderRadius: '8px',
-    minHeight: '120px',
-    fontSize: '1rem',
-    transition: 'border-color 0.3s ease',
+    borderRadius: '4px',
+    minHeight: '100px',
+    fontSize: '16px',
   },
   button: {
-    backgroundColor: '#f5576c',
+    backgroundColor: '#000000',
     color: '#ffffff',
-    padding: '12px 25px',
+    padding: '10px 20px',
     border: 'none',
-    borderRadius: '8px',
+    borderRadius: '4px',
     cursor: 'pointer',
-    fontSize: '1.1rem',
-    transition: 'background-color 0.3s ease, transform 0.2s ease',
-    width: '100%',
-    marginTop: '15px',
+    fontWeight: 'bold',
+    letterSpacing: '1px',
+    fontSize: '16px',
   },
   ctaContainer: {
     maxWidth: '300px',
-    padding: '30px',
-    color: '#ffffff',
-    textAlign: 'center',
+    padding: '20px',
+    color: '#cccccc',
   },
-  ctaHeading: {
-    fontSize: '1.8rem',
-    fontWeight: 'bold',
+  ctaTitle: {
+    fontSize: '24px',
+    fontWeight: '700',
     marginBottom: '15px',
-  },
-  ctaText: {
-    fontSize: '1.1rem',
-    marginBottom: '20px',
-    lineHeight: '1.5',
-    color: '#f0f0f0',
+    color: '#ffffff',
+    textTransform: 'uppercase',
   },
   socialMediaIcons: {
     display: 'flex',
-    justifyContent: 'center',
-    gap: '15px',
+    gap: '10px',
   },
   socialIcon: {
-    backgroundColor: '#ffffff',
+    background: 'transparent',
     border: 'none',
-    color: '#f5576c',
-    fontSize: '1.5rem',
-    padding: '10px 15px',
-    borderRadius: '50%',
+    color: '#ffffff',
+    fontSize: '18px',
     cursor: 'pointer',
-    transition: 'background-color 0.3s ease, transform 0.3s ease',
-    width: '40px',
-    height: '40px',
+    textDecoration: 'none',
+    transition: 'transform 0.3s ease',
   },
 };
 
