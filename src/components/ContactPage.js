@@ -27,7 +27,7 @@ const ContactPage = () => {
     <div style={styles.container}>
       <div style={styles.formContainer}>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name" style={styles.label}>Name</label>
           <input
             type="text"
             id="name"
@@ -37,7 +37,7 @@ const ContactPage = () => {
             style={styles.input}
           />
 
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email" style={styles.label}>Email</label>
           <input
             type="email"
             id="email"
@@ -47,7 +47,7 @@ const ContactPage = () => {
             style={styles.input}
           />
 
-          <label htmlFor="phone">Phone</label>
+          <label htmlFor="phone" style={styles.label}>Phone</label>
           <input
             type="tel"
             id="phone"
@@ -57,7 +57,7 @@ const ContactPage = () => {
             style={styles.input}
           />
 
-          <label htmlFor="company">Company</label>
+          <label htmlFor="company" style={styles.label}>Company</label>
           <input
             type="text"
             id="company"
@@ -67,7 +67,7 @@ const ContactPage = () => {
             style={styles.input}
           />
 
-          <label htmlFor="message">Message</label>
+          <label htmlFor="message" style={styles.label}>Message</label>
           <textarea
             id="message"
             name="message"
@@ -81,77 +81,111 @@ const ContactPage = () => {
         </form>
       </div>
       <div style={styles.ctaContainer}>
-        <h2>Share your thoughts</h2>
-        <p>We value your feedback and are here to help you with any questions or concerns.</p>
+        <h2 style={styles.ctaHeading}>Share your thoughts</h2>
+        <p style={styles.ctaText}>We value your feedback and are here to help you with any questions or concerns.</p>
         <div style={styles.socialMediaIcons}>
-          {/* Replace <a> with <button> */}
-          <button style={styles.socialIcon} onClick={() => window.location.href = 'https://facebook.com'}>Facebook</button>
-          <button style={styles.socialIcon} onClick={() => window.location.href = 'https://twitter.com'}>Twitter</button>
-          <button style={styles.socialIcon} onClick={() => window.location.href = 'https://instagram.com'}>Instagram</button>
-          <button style={styles.socialIcon} onClick={() => window.location.href = 'https://linkedin.com'}>LinkedIn</button>
-          <button style={styles.socialIcon} onClick={() => window.location.href = 'https://youtube.com'}>YouTube</button>
+          <button style={styles.socialIcon} onClick={() => window.location.href = 'https://facebook.com'}>F</button>
+          <button style={styles.socialIcon} onClick={() => window.location.href = 'https://twitter.com'}>T</button>
+          <button style={styles.socialIcon} onClick={() => window.location.href = 'https://instagram.com'}>I</button>
+          <button style={styles.socialIcon} onClick={() => window.location.href = 'https://linkedin.com'}>L</button>
+          <button style={styles.socialIcon} onClick={() => window.location.href = 'https://youtube.com'}>Y</button>
         </div>
       </div>
     </div>
   );
 };
 
-// Styles object for inline styling
+// Enhanced Inline Styles
 const styles = {
   container: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     height: '100vh',
-    backgroundColor: '#121212',
+    background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)', // Soft gradient background
     color: '#ffffff',
+    fontFamily: 'Arial, sans-serif',
   },
   formContainer: {
-    backgroundColor: '#f0f0f0',
-    padding: '20px',
-    borderRadius: '8px',
-    marginRight: '20px',
+    backgroundColor: '#ffffff',
+    padding: '30px',
+    borderRadius: '12px',
+    boxShadow: '0 4px 15px rgba(0, 0, 0, 0.1)',
     width: '500px',
+    maxWidth: '100%',
+    marginRight: '30px',
+  },
+  label: {
+    display: 'block',
+    marginBottom: '6px',
+    color: '#333333',
+    fontWeight: '600',
+    fontSize: '1.1rem',
   },
   input: {
     width: '100%',
-    padding: '10px',
-    margin: '10px 0',
+    padding: '12px',
+    margin: '8px 0',
     border: '1px solid #ccc',
-    borderRadius: '4px',
+    borderRadius: '8px',
+    fontSize: '1rem',
+    transition: 'border-color 0.3s ease',
   },
   textarea: {
     width: '100%',
-    padding: '10px',
-    margin: '10px 0',
+    padding: '12px',
+    margin: '8px 0',
     border: '1px solid #ccc',
-    borderRadius: '4px',
-    minHeight: '100px',
+    borderRadius: '8px',
+    minHeight: '120px',
+    fontSize: '1rem',
+    transition: 'border-color 0.3s ease',
   },
   button: {
-    backgroundColor: '#000000',
+    backgroundColor: '#f5576c',
     color: '#ffffff',
-    padding: '10px 20px',
+    padding: '12px 25px',
     border: 'none',
-    borderRadius: '4px',
+    borderRadius: '8px',
     cursor: 'pointer',
+    fontSize: '1.1rem',
+    transition: 'background-color 0.3s ease, transform 0.2s ease',
+    width: '100%',
+    marginTop: '15px',
   },
   ctaContainer: {
     maxWidth: '300px',
-    padding: '20px',
-    color: '#cccccc',
+    padding: '30px',
+    color: '#ffffff',
+    textAlign: 'center',
+  },
+  ctaHeading: {
+    fontSize: '1.8rem',
+    fontWeight: 'bold',
+    marginBottom: '15px',
+  },
+  ctaText: {
+    fontSize: '1.1rem',
+    marginBottom: '20px',
+    lineHeight: '1.5',
+    color: '#f0f0f0',
   },
   socialMediaIcons: {
     display: 'flex',
-    gap: '10px',
+    justifyContent: 'center',
+    gap: '15px',
   },
   socialIcon: {
-    background: 'transparent',
+    backgroundColor: '#ffffff',
     border: 'none',
-    color: '#ffffff',
-    fontSize: '24px',
+    color: '#f5576c',
+    fontSize: '1.5rem',
+    padding: '10px 15px',
+    borderRadius: '50%',
     cursor: 'pointer',
-    textDecoration: 'none', // Remove underline
+    transition: 'background-color 0.3s ease, transform 0.3s ease',
+    width: '40px',
+    height: '40px',
   },
 };
 
