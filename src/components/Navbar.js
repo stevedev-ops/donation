@@ -66,6 +66,10 @@ const Navbar = () => {
           <Link to="/" style={styles.navLink}>Home</Link>
         </li>
         {renderNavLinks()}
+        {/* Contact link before logout button */}
+        <li style={styles.navItem}>
+          <Link to="/contact" style={styles.navLink}>Contact</Link> {/* Contact link */}
+        </li>
         {isAuthenticated && (
           <li style={styles.navItem}>
             <button style={styles.logoutButton} onClick={handleLogout}>Logout</button>

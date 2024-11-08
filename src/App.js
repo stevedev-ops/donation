@@ -12,6 +12,7 @@ import CharityDashboard from './components/CharityDashboard';
 import AdminDashboard from './components/AdminDashboard';
 import SignupPage from './components/SignupPage';
 import LoginPage from './components/LoginPage';
+import ContactPage from './components/ContactPage'; // Import ContactPage
 import './App.css';
 
 function App() {
@@ -32,6 +33,8 @@ function App() {
             {/* Authentication Routes */}
             <Route path="/signup" element={<SignupPage />} />
             <Route path="/login" element={<LoginPage />} />
+            {/* Contact Page Route */}
+            <Route path="/contact" element={<ContactPage />} /> {/* Add Contact Page route */}
           </Routes>
         </div>
       </Router>
